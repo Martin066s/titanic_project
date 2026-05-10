@@ -4,7 +4,7 @@ library(ggvis)
 library(dplyr)
 library(tidyr)
 
-titanic_data <- read.csv("/Studium/WiSe25/bewerbungen/titanic_data.csv")
+titanic_data <- read.csv("titanic_data.csv")
 
 # UI-Definition
 ui <- fluidPage(
@@ -13,8 +13,7 @@ ui <- fluidPage(
     sidebarPanel(
       selectInput("gender", "Geschlecht", choices = c("Alle", unique(as.character(titanic_data$Sex)))),
       sliderInput("ageRange", "Altersbereich", min = 0, max = 100, value = c(0, 100)),
-      selectInput("pclass", "Passagierklasse", choices = c("Alle", unique(as.character(titanic_data$Pclass)))),
-      h3("Sources"), p("https://chat.openai.com/share/399fe3f1-04fd-43f5-bcb8-789a87545e15")
+      selectInput("pclass", "Passagierklasse", choices = c("Alle", unique(as.character(titanic_data$Pclass))))
     ),
     mainPanel(
       tabsetPanel(type = "tabs",
