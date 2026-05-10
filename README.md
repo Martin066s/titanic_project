@@ -1,4 +1,4 @@
-# titanic_project
+# Das Unglück der Titanic - Wer hat überlebt?
 
 Generiert beim ausführen der Datei "app.R" eine HTML Seite auf Basis von dem Datensatz in der Datei "titanic_data.csv". 
 
